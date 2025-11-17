@@ -1,0 +1,25 @@
+# Binaries
+zapmanejo-backend2
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go workspace
+/bin/
+/pkg/
+/vendor/
+go.work
+go.work.sum
