@@ -1,6 +1,6 @@
 package database
 
-import "zapmanejo-backend2/internal/models"
+import "zapmanejo-cleanbackend/internal/models"
 
 func SeedLifetimeSlots() {
 	var count int64
