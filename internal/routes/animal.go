@@ -4,9 +4,9 @@ import (
 	"time"
 
 	"github.com/gofiber/fiber/v2"
-	"zapmanejo-backend2/internal/database"
-	"zapmanejo-backend2/internal/middleware"
-	"zapmanejo-backend2/internal/models"
+	"zapmanejo-cleanbackend/internal/database"
+	"zapmanejo-cleanbackend/internal/middleware"
+	"zapmanejo-cleanbackend/internal/models"
 )
 
 func SetupAnimalRoutes(app *fiber.App) {
