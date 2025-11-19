@@ -5,7 +5,7 @@ services:
     # TODO: Update YOUR_USERNAME with your actual GitHub username
     repo_clone_url: https://github.com/MichaelTinney/zapmanejo-cleanbackend.git
   environment_slug: go
-  build_command: go mod tidy && go build -o zapmanejo main.go
+ 
   run_command: ./zapmanejo
   instance_count: 1
   instance_size_slug: basic-xs
