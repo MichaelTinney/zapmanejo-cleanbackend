@@ -2,9 +2,9 @@ package routes
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"zapmanejo-cleanbackend/internal/database"
-	"zapmanejo-cleanbackend/internal/middleware"
-	"zapmanejo-cleanbackend/internal/models"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/database"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/middleware"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/models"
 )
 
 func SetupHealthRoutes(app *fiber.App) {

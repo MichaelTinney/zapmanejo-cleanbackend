@@ -1,7 +1,7 @@
 package database
 
 import (
-	"zapmanejo-cleanbackend/internal/models"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/models"
 )
 
 func AutoMigrate() {

@@ -7,8 +7,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 	"github.com/joho/godotenv"
-	"zapmanejo-cleanbackend/internal/database"
-	"zapmanejo-cleanbackend/internal/routes"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/database"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/routes"
 )
 
 func main() {

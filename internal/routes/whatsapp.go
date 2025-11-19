@@ -1,14 +1,9 @@
 package routes
 
 import (
-	"crypto/hmac"
-	"crypto/sha256"
-	"encoding/hex"
 	"os"
 
 	"github.com/gofiber/fiber/v2"
-	"zapmanejo-cleanbackend/internal/models"
-	"zapmanejo-cleanbackend/internal/database"
 )
 
 func SetupWhatsAppRoutes(app *fiber.App) {
