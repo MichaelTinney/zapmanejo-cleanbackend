@@ -1,15 +1,15 @@
 package routes
 
 import (
-	"os"
 	"strconv"
 
 	"github.com/gofiber/fiber/v2"
-	"zapmanejo-cleanbackend/internal/database"
-	"zapmanejo-cleanbackend/internal/middleware"
-	"zapmanejo-cleanbackend/internal/models"
-	"github.com/paypal/paypal-checkout-sdk/v2/payments"
-	"github.com/paypal/paypal-checkout-sdk/v2/payments/capture"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/database"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/middleware"
+	"github.com/MichaelTinney/zapmanejo-cleanbackend/internal/models"
+	// TODO: Add PayPal SDK integration when needed
+	// "github.com/paypal/paypal-checkout-sdk/v2/payments"
+	// "github.com/paypal/paypal-checkout-sdk/v2/payments/capture"
 )
 
 func SetupPaymentRoutes(app *fiber.App) {
@@ -71,5 +71,9 @@ func capturePayPalOrder(c *fiber.Ctx) error {
 	}
 
 	database.DB.Create(&payment)
-	return c.JSON(fiber.Map{"success": true, "plan": input.Type == "lifetime" ? "lifetime" : "monthly"})
+	plan := "monthly"
+	if input.Type == "lifetime" {
+		plan = "lifetime"
+	}
+	return c.JSON(fiber.Map{"success": true, "plan": plan})
 }

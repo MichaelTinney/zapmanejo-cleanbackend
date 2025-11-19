@@ -1,0 +1,43 @@
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - gofmt
+    - goimports
+    - misspell
+    - unconvert
+    - unparam
+    - gosec
+
+linters-settings:
+  gosec:
+    excludes:
+      - G104 # Audit errors not checked - we'll handle these case by case
+  
+  errcheck:
+    check-type-assertions: false
+    check-blank: false
+
+run:
+  timeout: 5m
+  tests: true
+  
+issues:
+  exclude-rules:
+    # Exclude some linters from running on tests files
+    - path: _test\.go
+      linters:
+        - errcheck
+        - gosec
+
+  max-issues-per-linter: 0
+  max-same-issues: 0
+
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
