@@ -1,8 +1,10 @@
 package routes
+
 import (
 	"github.com/gofiber/fiber/v2"
 	"zapmanejo-cleanbackend/internal/database"
 )
+
 func Setup(app *fiber.App) {
 	SetupAuthRoutes(app)
 	SetupAnimalRoutes(app)
